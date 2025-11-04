@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:5000/api/users";
+const API = import.meta.env.VITE_API_BASE_URL;
 
 export default function UserForm({ refresh }) {
   const [form, setForm] = useState({ name: "", email: "", age: "" });

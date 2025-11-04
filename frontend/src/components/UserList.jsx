@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/api/users";
+const API = import.meta.env.VITE_API_BASE_URL;
 
 export default function UserList({ users, refresh }) {
   const deleteUser = async (id) => {

@@ -3,7 +3,7 @@ import axios from "axios";
 import UserForm from "./components/UserForm";
 import UserList from "./components/UserList";
 
-const API = "http://localhost:5000/api/users";
+const API = import.meta.env.VITE_API_BASE_URL;
 
 function App() {
   const [users, setUsers] = useState([]);
