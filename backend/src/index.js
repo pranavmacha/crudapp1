@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/api/users", userRoutes);
+app.use(["/api/users", "/api/user"], userRoutes);
 
 app.get("/", (req, res) => {
   res.send("✅ MERN + Prisma Backend is Live!");
